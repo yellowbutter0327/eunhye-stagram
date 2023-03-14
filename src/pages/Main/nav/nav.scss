@@ -1,0 +1,50 @@
+.nav-bar {
+  background-color: rgb(255, 255, 255);
+  border-bottom: 1px solid grey;
+  .nav-wrap {
+    display: flex;
+    justify-content: space-between;
+    width: 1000px;
+    margin: 0 auto;
+    padding-bottom: 10px;
+
+    .logo-wrap {
+      display: flex;
+      align-items: center;
+
+      .logo-pic-img {
+        width: 30px;
+        height: 30px;
+      }
+
+      .logo-text {
+        font-family: 'Pacifico', cursive;
+        font-size: 20px;
+        display: inline-block;
+        margin-left: 10px;
+        cursor: pointer;
+        text-decoration: none;
+        color: black;
+      }
+    }
+
+    .nav-text-input {
+      border-radius: 5%;
+      border: 1px solid grey;
+      text-align: center;
+      margin: 10px 0px;
+      width: 30%;
+      outline: 0;
+    }
+
+    .icon-wrap {
+      margin-top: 5px;
+      margin-left: 5px;
+      .menuIcon {
+        cursor: pointer;
+        padding-left: 5px;
+        width: 40px;
+      }
+    }
+  }
+}

@@ -1,0 +1,164 @@
+@import '../../styles/variables.scss';
+
+.login {
+  max-width: 760px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 100px auto;
+
+  .picWrap {
+    width: 40%;
+    position: relative;
+    height: 620px;
+    background: url(../../../public/images/iphone.png) no-repeat center;
+    background-size: contain;
+    .transition-pic {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 90%;
+      height: 100%;
+
+      .phone-pic {
+        position: absolute;
+        border-radius: 10px;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        width: 96%;
+        height: 74%;
+        object-fit: cover;
+        &.img1 {
+          animation: ani1 4s infinite;
+        }
+        &.img2 {
+          animation: ani2 4s infinite;
+        }
+        &.img3 {
+          animation: ani3 4s infinite;
+        }
+      }
+    }
+  }
+
+  .loginWrap {
+    width: 50%;
+
+    .loginContainer {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      padding-top: 50px;
+      border: 1px solid grey;
+      text-align: center;
+      .title {
+        font-family: 'Pacifico', cursive;
+        font-size: 60px;
+      }
+      .loginForm {
+        margin: 80px 0 50px 0;
+        input {
+          width: 100%;
+          margin-bottom: 15px;
+          font-size: 18px;
+          padding: 10px 0 10px 10px;
+          border: 1px solid gray;
+          border-radius: 5px;
+          background-color: #fafafa;
+          outline: none;
+        }
+      }
+
+      .loginButton {
+        width: 30%;
+        padding: 20px 25px;
+        margin-bottom: 50px;
+        background-color: $light-blue;
+        border: none;
+        border-radius: 5px;
+        color: white;
+        outline: none;
+        opacity: 0.5;
+        cursor: default;
+        &:disabled {
+          background-color: $light-blue;
+        }
+      }
+    }
+    .findPassword {
+      border-bottom: 1px solid grey;
+      margin: 30px;
+      padding-bottom: 20px;
+      text-align: center;
+      .findPwLink {
+        color: darkblue;
+        font-weight: bold;
+        text-decoration: none;
+        cursor: pointer;
+        font-size: 18px;
+        text-align: center;
+      }
+    }
+
+    .register {
+      margin-top: 20px;
+      text-align: center;
+    }
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .login {
+    justify-content: center;
+  }
+  .picWrap {
+    display: none;
+  }
+}
+
+@keyframes ani1 {
+  0% {
+    opacity: 1;
+  }
+  33% {
+    opacity: 0;
+  }
+  66% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes ani2 {
+  0% {
+    opacity: 0;
+  }
+  33% {
+    opacity: 1;
+  }
+  66% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes ani3 {
+  0% {
+    opacity: 0;
+  }
+  33% {
+    opacity: 0;
+  }
+  66% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
