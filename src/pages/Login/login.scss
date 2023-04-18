@@ -57,10 +57,12 @@
         font-family: 'Pacifico', cursive;
         font-size: 60px;
       }
+
       .loginForm {
         margin: 80px 0 50px 0;
+        width: 100%;
         input {
-          width: 100%;
+          width: 80%;
           margin-bottom: 15px;
           font-size: 18px;
           padding: 10px 0 10px 10px;
@@ -68,6 +70,10 @@
           border-radius: 5px;
           background-color: #fafafa;
           outline: none;
+        }
+
+        .errorMessageWrap {
+          padding-bottom: 7px;
         }
       }
 
@@ -81,10 +87,13 @@
         color: white;
         outline: none;
         opacity: 0.5;
-        cursor: default;
-        &:disabled {
-          background-color: $light-blue;
-        }
+        cursor: pointer;
+
+        // .loginButton enabled-button {
+        //   background-color: red;
+        //   color: white;
+        //   cursor: pointer;
+        // }
       }
     }
     .findPassword {
@@ -100,11 +109,6 @@
         font-size: 18px;
         text-align: center;
       }
-    }
-
-    .register {
-      margin-top: 20px;
-      text-align: center;
     }
   }
 }

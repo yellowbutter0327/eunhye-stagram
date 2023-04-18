@@ -1,12 +1,19 @@
 .nav-bar {
+  position: fixed;
+  width: 100%;
+  z-index: 100;
+  top: 0;
+  left: 0;
   background-color: rgb(255, 255, 255);
+  height: 60px;
   border-bottom: 1px solid grey;
   .nav-wrap {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     width: 1000px;
     margin: 0 auto;
-    padding-bottom: 10px;
+    padding-top: 5px;
 
     .logo-wrap {
       display: flex;
@@ -28,22 +35,61 @@
       }
     }
 
-    .nav-text-input {
-      border-radius: 5%;
+    .searchWrap {
+      background-color: rgb(255, 255, 255);
+      width: 35%;
+
       border: 1px solid grey;
-      text-align: center;
+      border-radius: 5%;
+      display: flex;
+      align-items: center;
       margin: 10px 0px;
-      width: 30%;
-      outline: 0;
+      .nav-text-input {
+        height: 30px;
+        width: 90%;
+        border: none;
+        text-align: center;
+        outline: 0;
+      }
+      .searchIcon {
+        object-fit: cover;
+        cursor: pointer;
+        width: 10%;
+        border: none;
+        border-radius: 5px;
+      }
     }
 
     .icon-wrap {
+      display: flex;
       margin-top: 5px;
       margin-left: 5px;
+
+      .category {
+        position: absolute;
+        top: 60px;
+        right: 400px;
+        background-color: white;
+        border: 1px solid grey;
+        border-radius: 3px;
+        font-size: 18px;
+        width: 120px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        float: right;
+        li {
+          margin-top: 6px;
+          margin-left: 5px;
+        }
+        a {
+          text-decoration: none;
+          color: black;
+        }
+      }
       .menuIcon {
         cursor: pointer;
         padding-left: 5px;
         width: 40px;
+        // position: relative;
       }
     }
   }

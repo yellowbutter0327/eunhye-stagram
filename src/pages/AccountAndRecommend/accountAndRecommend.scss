@@ -1,0 +1,252 @@
+.accountAndRecommendContainer {
+  .my-profile-tap {
+    border: none;
+    display: flex;
+    align-items: center;
+    .main-profile-img {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+    }
+    .profile-description-wrap {
+      padding-left: 20px;
+      .main-profile-name {
+        display: block;
+        font-weight: bold;
+        text-decoration: none;
+        color: black;
+      }
+      .profile-description {
+        display: block;
+      }
+    }
+  }
+
+  .recommend-wrap {
+    background-color: white;
+    border: 1px solid black;
+    margin-top: 10px;
+    .reco-top-wrap {
+      display: flex;
+      justify-content: space-between;
+      .reco-title {
+        color: grey;
+        display: inline-block;
+        padding-left: 10px;
+        padding-top: 10px;
+      }
+      .reco-show-all {
+        font-weight: bold;
+        display: inline-block;
+        padding-right: 10px;
+        padding-top: 10px;
+        text-decoration: none;
+        color: black;
+      }
+    }
+    .recommend-people {
+      .reco-person-wrap {
+        display: flex;
+        align-items: center;
+        padding-left: 10px;
+        padding-top: 10px;
+        padding-bottom: 5px;
+        .recommend-img {
+          width: 50px;
+          border-radius: 50%;
+          margin-right: 15px;
+        }
+        .follow-description-wrap {
+          display: flex;
+          align-items: center;
+          .user-nickname {
+            display: block;
+            font-weight: bold;
+            text-decoration: none;
+            color: black;
+          }
+          .follow-reco-description {
+            color: gray;
+            font-size: 15px;
+          }
+          .follow-button {
+            cursor: pointer;
+            color: #8ab4f7;
+            border: none;
+            background-color: transparent;
+            font-weight: bold;
+            margin-left: 10px;
+          }
+        }
+      }
+    }
+  }
+}
+.right-wrap {
+  padding-left: 30px;
+  width: 40%;
+
+  .my-profile-tap {
+    border: none;
+    display: flex;
+    align-items: center;
+    .main-profile-img {
+      width: 50px;
+      border-radius: 50%;
+    }
+    .profile-description-wrap {
+      padding-left: 20px;
+      .main-profile-name {
+        display: block;
+        font-weight: bold;
+        text-decoration: none;
+        // color: black;
+      }
+      .profile-description {
+        display: block;
+      }
+    }
+  }
+
+  // .story-wrap {
+  //   background-color: white;
+  //   border: 1px solid black;
+  //   margin-top: 10px;
+  //   .story-top-wrap {
+  //     display: flex;
+  //     justify-content: space-between;
+  //     .story-title {
+  //       color: grey;
+  //       display: inline-block;
+  //       padding-left: 10px;
+  //       padding-top: 10px;
+  //     }
+  //     .story-show-all {
+  //       font-weight: bold;
+  //       display: inline-block;
+  //       padding-right: 10px;
+  //       padding-top: 10px;
+  //       text-decoration: none;
+  //       color: black;
+  //     }
+  //   }
+  //   .instagram-story {
+  //     .story-description-wrap {
+  //       display: flex;
+  //       align-items: center;
+  //       padding-left: 10px;
+  //       padding-top: 10px;
+  //       padding-bottom: 10px;
+  //       .story-img {
+  //         width: 50px;
+  //         border-radius: 50%;
+  //         margin-right: 15px;
+  //       }
+  //       .user-nickname {
+  //         color: var(--usernick-color);
+  //         display: block;
+  //         font-weight: bold;
+  //         text-decoration: none;
+  //       }
+  //       .story-time {
+  //         color: gray;
+  //       }
+  //     }
+  //   }
+  // }
+
+  .recommend-wrap {
+    background-color: white;
+    border: 1px solid black;
+    margin-top: 10px;
+
+    .reco-top-wrap {
+      display: flex;
+      justify-content: space-between;
+      .reco-title {
+        color: grey;
+        display: inline-block;
+        padding-left: 10px;
+        padding-top: 10px;
+      }
+      .reco-show-all {
+        font-weight: bold;
+        display: inline-block;
+        padding-right: 10px;
+        padding-top: 10px;
+        text-decoration: none;
+        color: black;
+      }
+    }
+    .recommend-people {
+      .reco-person-wrap {
+        display: flex;
+        align-items: center;
+        padding-left: 10px;
+        padding-top: 10px;
+        padding-bottom: 5px;
+        .recommend-img {
+          width: 15%;
+          border-radius: 50%;
+          margin-right: 15px;
+        }
+        .follow-description-wrap {
+          display: flex;
+          width: 90%;
+          justify-content: space-between;
+          align-items: center;
+          .user-nickname {
+            display: block;
+            font-weight: bold;
+            text-decoration: none;
+            color: black;
+          }
+          .follow-reco-description {
+            color: gray;
+            font-size: 13px;
+          }
+          .clicked {
+            cursor: pointer;
+            color: white;
+            background-color: blue;
+            border: none;
+            font-weight: bold;
+            padding: 3px;
+            margin: 5px;
+          }
+          .unclicked {
+            cursor: pointer;
+            color: #8ab4f7;
+            border: none;
+            background-color: transparent;
+            font-weight: bold;
+            margin: 5px;
+          }
+        }
+      }
+    }
+  }
+
+  .siteMapWrapper {
+    height: 50px;
+    margin: 30px 5px;
+
+    .siteMapList {
+      display: flex;
+      flex-wrap: wrap;
+      max-width: 300px;
+
+      .siteInfoLink {
+        display: flex;
+        margin-bottom: 5px;
+        font-size: 12px;
+        text-decoration: none;
+        color: grey;
+        &:not(.lastElement)::after {
+          content: '\00B7';
+          margin: 0 2px;
+        }
+      }
+    }
+  }
+}

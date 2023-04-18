@@ -46,8 +46,8 @@ const Profile = () => {
 export default Profile;
 
 const STORY_PROFILE = [
-  { key: 0, name: 'hyehye', src: '././images/dandelion.jpg' },
-  { key: 1, name: 'helloworld', src: '././images/puppy.jpg' },
-  { key: 2, name: 'strawberry', src: '././images/cat.jpg' },
-  { key: 3, name: 'yerin', src: '././images/music.png' },
+  { key: 0, name: 'hyehye', src: '././images/story-image1.jpg' },
+  { key: 1, name: 'helloworld', src: '././images/story-image2.jpg' },
+  { key: 2, name: 'strawberry', src: '././images/story-image3.jpg' },
+  { key: 3, name: 'yerin', src: '././images/story-image4.png' },
 ];
