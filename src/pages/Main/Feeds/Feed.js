@@ -28,7 +28,7 @@ const Feed = ({
   const toggleLike = () => setLike(prev => !prev);
 
   return (
-    <div className="left-wrap">
+    <>
       <div className="feed-wrap" key={id} onDoubleClick={toggleLike}>
         <div className="profile-wrap">
           <FeedHeader
@@ -88,7 +88,7 @@ const Feed = ({
           </div>
         </div>
       </div>
-    </div>
+    </>
   );
 };
 

@@ -43,7 +43,7 @@ const Nav = ({ toggledarkmode }) => {
                 <div
                   key={icons.id}
                   onClick={() => setShowCategory(!showCategory)}
-                  className="test"
+                  className="nav-my-page"
                 >
                   <img className="menuIcon" src={icons.src} alt={icons.alt} />
                   {showCategory && (
@@ -99,6 +99,6 @@ const MENU_ICONS = [
     key: 'mypage',
     src: './images/mypage.png',
     alt: '마이페이지 로고',
-    className: 'test',
+    className: 'nav-my-page',
   },
 ];

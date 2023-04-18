@@ -65,26 +65,31 @@
       margin-top: 5px;
       margin-left: 5px;
 
-      .category {
-        position: absolute;
-        top: 60px;
-        right: 400px;
-        background-color: white;
-        border: 1px solid grey;
-        border-radius: 3px;
-        font-size: 18px;
-        width: 120px;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-        float: right;
-        li {
-          margin-top: 6px;
-          margin-left: 5px;
-        }
-        a {
-          text-decoration: none;
-          color: black;
+      .nav-my-page {
+        position: relative;
+
+        .category {
+          position: absolute;
+          top: 45px;
+          right: 0;
+          background-color: white;
+          border: 1px solid grey;
+          border-radius: 3px;
+          font-size: 18px;
+          width: 120px;
+          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+          float: right;
+          li {
+            margin-top: 6px;
+            margin-left: 5px;
+          }
+          a {
+            text-decoration: none;
+            color: black;
+          }
         }
       }
+
       .menuIcon {
         cursor: pointer;
         padding-left: 5px;
