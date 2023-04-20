@@ -24,9 +24,16 @@
 
         .comment-div {
           padding-left: 5px;
+
           .people-like-div {
-            .people-like-span {
+            display: flex;
+            align-items: center;
+            .fa-heart {
               font-size: 25px;
+            }
+            .people-like-span {
+              margin-left: 10px;
+              font-size: 20px;
             }
           }
 

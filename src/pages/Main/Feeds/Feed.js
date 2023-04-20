@@ -3,6 +3,8 @@ import './feed.scss';
 import Comment from './Comment/Comment';
 import FeedContent from './FeedContent/FeedContent';
 import FeedHeader from './FeedHeader/FeedHeader';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faHeart } from '@fortawesome/free-solid-svg-icons';
 
 const Feed = ({
   id,
@@ -25,7 +27,9 @@ const Feed = ({
     setReply(comment);
   }
 
-  const toggleLike = () => setLike(prev => !prev);
+  const toggleLike = () => {
+    setLike(prev => !prev);
+  };
 
   return (
     <>
@@ -42,8 +46,14 @@ const Feed = ({
             <div className="under-button-wrap">
               <div className="comment-div">
                 <div className="people-like-div">
-                  <i onClick={toggleLike} />
-                  <span className="people-like-span">좋아요 {likeHit}개</span>
+                  <i
+                    className={`fa-heart ${like ? 'fas is-liked' : 'far'}`}
+                    onClick={toggleLike}
+                  />
+
+                  <span className="people-like-span">
+                    좋아요 {like ? likeHit + 1 : likeHit}개
+                  </span>
                 </div>
 
                 <div className="my-comment-wrap">
