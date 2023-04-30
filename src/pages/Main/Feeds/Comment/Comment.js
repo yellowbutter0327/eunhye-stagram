@@ -1,14 +1,27 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import './comment.scss';
 
-const Comment = ({ id, replyAccount, mockReply }) => {
+const Comment = ({ id, account, removeReply, reply }) => {
+  const [like, setLike] = useState(false);
+
+  const toggleLike = () => {
+    setLike(prev => !prev);
+  };
+
   return (
-    <div className="user-comment" key={id}>
-      <div className="user-account">
-        <span className="user-name">{replyAccount}</span>
-        {mockReply}
+    <>
+      <div className="user-comment-wrap">
+        <span className="user-name">{account}</span>
+        <span className="user-reply">{reply}</span>
+        <div className="comment-icon-wrap">
+          <i
+            className={`fa-heart ${like ? 'fas is-liked' : 'far'}`}
+            onClick={toggleLike}
+          />
+          <i class="fa-solid fa-trash-can" onClick={() => removeReply(id)}></i>
+        </div>
       </div>
-    </div>
+    </>
   );
 };
 

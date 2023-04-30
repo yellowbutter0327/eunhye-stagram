@@ -1,12 +1,10 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
 import './login.scss';
 import Modal from './Modal/Modal.js';
-
-const User = {
-  email: 'hye@star.com',
-  pw: 'hye1234@@',
-};
+import { auth } from '../../firebase';
+import { signInWithEmailAndPassword } from 'firebase/auth';
 
 const Login = () => {
   const [email, setEmail] = useState('');
@@ -47,17 +45,20 @@ const Login = () => {
     }
   };
 
-  const onClickConfirmButton = () => {
-    if (email === User.email && pw === User.pw) {
-      alert('로그인에 성공했습니다.');
-      navigate('/main');
-    } else {
-      alert('등록되지 않은 회원입니다.');
-    }
-  };
-
-  const onClickFindPwLink = () => {
-    setShowModal(true);
+  const handleSubmit = e => {
+    e.preventDefault();
+    signInWithEmailAndPassword(auth, email, pw)
+      .then(userCredential => {
+        sessionStorage.setItem('email', email);
+        sessionStorage.setItem('pw', pw);
+        // setIsLoggedIn(true);
+        alert('안녕하세요 :)');
+        navigate('/main');
+        window.location.reload();
+      })
+      .catch(error => {
+        console.log(error);
+      });
   };
 
   const modalClose = () => {
@@ -115,17 +116,17 @@ const Login = () => {
 
           <button
             className={`loginButton ${notAllow ? '' : 'enabled-button'}`}
-            onClick={onClickConfirmButton}
+            onClick={handleSubmit}
             disabled={notAllow}
-            type="submit"
+            type="button"
           >
             로그인
           </button>
         </div>
         <div className="findPassword">
-          <a className="findPwLink" href="#!" onClick={onClickFindPwLink}>
-            아이디 / 비밀번호를 잊으셨나요?
-          </a>
+          <Link to="./register" className="findPwLink">
+            회원가입하기
+          </Link>
         </div>
         {showModal && <Modal modalClose={modalClose}></Modal>}
       </div>

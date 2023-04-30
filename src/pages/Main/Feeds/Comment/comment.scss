@@ -1,8 +1,20 @@
-.user-comment {
-  .user-account {
-    .user-name {
-      margin-right: 3px;
-      font-weight: bold;
+.user-comment-wrap {
+  width: 100%;
+  font-size: 16px;
+  display: flex;
+  justify-content: space-between;
+  .user-name {
+    display: inline-block;
+    font-weight: bold;
+    width: 10%;
+  }
+  .user-reply {
+    display: inline-block;
+    width: 80%;
+  }
+  .comment-icon-wrap {
+    i {
+      padding-right: 5px;
     }
   }
 }

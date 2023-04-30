@@ -1,11 +1,26 @@
 import React, { useState, useEffect } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
+import { Link, useNavigate } from 'react-router-dom';
 
 import './nav.scss';
 
 const Nav = ({ toggledarkmode }) => {
+  const navigate = useNavigate();
   const [showCategory, setShowCategory] = useState(false);
+  const [isLoggedIn, setIsLoggedIn] = useState(
+    !!sessionStorage.getItem('userId')
+  );
+  const handleLogout = () => {
+    sessionStorage.removeItem('id');
+    setIsLoggedIn(false);
+    navigate('/');
+  };
+
+  useEffect(() => {
+    setIsLoggedIn(!!sessionStorage.getItem('id'));
+  }, [isLoggedIn]);
+
   return (
     <nav className="nav-bar">
       <div className="nav-wrap">
@@ -59,7 +74,9 @@ const Nav = ({ toggledarkmode }) => {
                       </li>
                       <li>
                         {' '}
-                        <a href="#!">로그아웃</a>
+                        <Link to="/" onClick={handleLogout}>
+                          로그아웃
+                        </Link>
                       </li>
                     </ul>
                   )}

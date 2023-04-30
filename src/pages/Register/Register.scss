@@ -1,0 +1,35 @@
+.register-container {
+  text-align: center;
+  margin: 0 auto;
+  width: 350px;
+  margin-top: 150px;
+  font-size: 35px;
+  border: 1px solid black;
+  border-radius: 5px;
+  .title {
+    margin-top: 10px;
+  }
+  .register-form {
+    margin-top: 30px;
+
+    .register-input-wrap {
+      margin-top: 30px;
+      .register-title {
+        font-size: 20px;
+      }
+      .register-input {
+        margin-top: 10px;
+        width: 80%;
+        font-size: 20px;
+      }
+      .errorMessageWrap {
+        font-size: 15px;
+        color: blue;
+      }
+    }
+  }
+  .register-button {
+    font-size: 18px;
+    margin: 30px;
+  }
+}

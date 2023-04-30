@@ -1,10 +1,8 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import './feed.scss';
 import Comment from './Comment/Comment';
 import FeedContent from './FeedContent/FeedContent';
 import FeedHeader from './FeedHeader/FeedHeader';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faHeart } from '@fortawesome/free-solid-svg-icons';
 
 const Feed = ({
   id,
@@ -16,11 +14,12 @@ const Feed = ({
   replyAccount,
   mockReply,
 }) => {
-  const [page, setPage] = useState(1);
+  const [comment, setComment] = useState([]);
   const [reply, setReply] = useState('');
   const [uniqueKey, setUniqueKey] = useState(1);
-  const [comment, setComment] = useState([]);
   const [like, setLike] = useState(false);
+  const [replyLike, setReplyLike] = useState(false);
+  const [commentContainer, setCommentContainer] = useState([]);
 
   function getReply(e) {
     const comment = e.target.value;
@@ -29,6 +28,26 @@ const Feed = ({
 
   const toggleLike = () => {
     setLike(prev => !prev);
+  };
+
+  const replyToggleLike = () => {
+    setReplyLike(prev => !prev);
+  };
+
+  function submitComment(e) {
+    e.preventDefault();
+    if (reply.length === 0) return;
+    setComment([...comment, { id: uniqueKey, account: 'hyehye', reply }]);
+    setUniqueKey(prev => prev + 1);
+    setReply('');
+  }
+
+  const removeReply = uniqueKey => {
+    setComment(
+      comment.filter(cmt => {
+        return cmt.id !== uniqueKey;
+      })
+    );
   };
 
   return (
@@ -61,32 +80,41 @@ const Feed = ({
                   <span>{feedText}</span>
                 </div>
 
-                <div className="my-comment-wrap">
-                  <div className="userAccount">
-                    {account}
-                    <span>&nbsp;</span>
-                    <span className="reply">{mockReply}</span>
-                    {/* {comment.map(({ id, replyAccount, mockReply }) => {
-                        return (
-                          <Comment
-                            key={id}
-                            replyAccount={replyAccount}
-                            mockReply={mockReply}
-                          />
-                        );
-                      })} */}
+                <div className="pre-comment-wrap">
+                  <span className="pre-account-name"> {replyAccount}</span>
+                  <span className="pre-reply">{mockReply}</span>
+
+                  <div className="pre-icon-wrap">
+                    <i
+                      className={`fa-heart ${
+                        replyLike ? 'fas is-liked' : 'far'
+                      }`}
+                      onClick={replyToggleLike}
+                    />
                   </div>
                 </div>
+                {comment.map(({ id, account, reply }) => {
+                  return (
+                    <Comment
+                      id={id}
+                      key={id}
+                      account={account}
+                      reply={reply}
+                      removeReply={removeReply}
+                    />
+                  );
+                })}
               </div>
 
               <div className="comment-register-wrap">
-                <form className="commentForm">
+                <form className="commentForm" onSubmit={submitComment}>
                   <input
                     className="addcomment-input"
                     placeholder="댓글 달기..."
-                    // onChange={getReply}
-                    // value={mockReply}
+                    onChange={getReply}
+                    value={reply}
                   />
+
                   <button
                     className={reply.length >= 1 ? 'submitOn' : 'submitOff'}
                   >
