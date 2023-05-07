@@ -36,8 +36,6 @@ const Nav = ({ toggledarkmode }) => {
       });
   }, []);
 
-  console.log(searchIds);
-
   const filterId = userInput.length
     ? searchIds.filter(idName => idName.account.includes(userInput))
     : [];

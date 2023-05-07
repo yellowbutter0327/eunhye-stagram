@@ -43,8 +43,8 @@
     "id": "5",
     "account": "lcharrette0",
     "likeHit": 99,
-    "replyAccount": "yellow_butter",
-    "mockReply": "우와 러버덕 진짜 귀여워!",
+    "replyAccount": "dev_minsu",
+    "mockReply": "what's the model of the notebook?",
     "feedImgsrc": "https://picsum.photos/id/0/800/800",
     "feedText": "Maecenas ut massa quis augue luctus tincidunt. Nulla mollis molestie lorem. Quisque ut erat. Curabitur gravida nisi at nibh. In hac habitasse platea dictumst.",
     "userFeedProfile": "https://i.pravatar.cc/300?img=0"
@@ -56,15 +56,15 @@
     "replyAccount": "yellow_butter",
     "feedText": "Nulla tempus. Vivamus in felis eu sapien cursus vestibulum. Proin eu mi. Nulla ac enim. In tempor, turpis nec euismod scelerisque, quam turpis adipiscing lorem, vitae mattis nibh ligula nec sem.",
     "feedImgsrc": "https://picsum.photos/id/10/800/800",
-    "mockReply": "러버덕 봤어요",
+    "mockReply": "That's amazing!!",
     "userFeedProfile": "https://i.pravatar.cc/300?img=1"
   },
   {
     "id": "7",
     "account": "bfirk2",
     "likeHit": 99,
-    "replyAccount": "yellow_butter",
-    "mockReply": "우와 러버덕 진짜 귀여워!",
+    "replyAccount": "study_hye",
+    "mockReply": "ur pic is really good",
     "feedImgsrc": "https://picsum.photos/id/20/800/800",
     "feedText": "In tempor, turpis nec euismod scelerisque, quam turpis adipiscing lorem, vitae mattis nibh ligula nec sem. Duis aliquam convallis nunc. Proin at turpis a pede posuere nonummy. Integer non velit. Donec diam neque, vestibulum eget, vulputate ut, ultrices vel, augue. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec pharetra, magna vestibulum aliquet ultrices, erat tortor sollicitudin mi, sit amet lobortis sapien sapien non mi. Integer ac neque. Duis bibendum. Morbi non quam nec dui luctus rutrum. Nulla tellus.",
     "userFeedProfile": "https://i.pravatar.cc/300?img=2"

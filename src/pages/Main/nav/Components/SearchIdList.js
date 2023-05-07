@@ -2,10 +2,15 @@ import React from 'react';
 import './SearchIdList.scss';
 
 function SearchIdList({ searchIds }) {
+  const containerClass =
+    searchIds.length === 0
+      ? 'search-id-container hidden'
+      : 'search-id-container';
+
   return (
-    <a className="search-id-container" href="#!">
+    <a className={containerClass} href="#!">
       {searchIds.map(({ id, account, userFeedProfile }) => (
-        <li class="search-id-list" key={id}>
+        <li className="search-id-list" key={id}>
           <img
             src={userFeedProfile}
             all="유저 이미지"

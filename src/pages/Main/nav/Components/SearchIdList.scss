@@ -12,6 +12,9 @@
   padding: 20px;
   overflow: auto;
   border: 1px solid #000;
+  &.hidden {
+    display: none;
+  }
   .search-id-list {
     display: flex;
     align-items: center;

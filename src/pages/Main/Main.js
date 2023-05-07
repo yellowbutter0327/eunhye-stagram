@@ -52,6 +52,7 @@ const Main = () => {
                     likeHit={likeHit}
                     replyAccount={replyAccount}
                     mockReply={mockReply}
+                    toggledarkmode={DarkMode}
                   />
                 );
               }
