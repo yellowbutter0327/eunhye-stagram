@@ -2,7 +2,8 @@ import React, { useState, useEffect } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
 import { Link, useNavigate } from 'react-router-dom';
-
+import SearchBox from './Components/SearchBox';
+import SearchIdList from './Components/SearchIdList';
 import './nav.scss';
 
 const Nav = ({ toggledarkmode }) => {
@@ -16,10 +17,30 @@ const Nav = ({ toggledarkmode }) => {
     setIsLoggedIn(false);
     navigate('/');
   };
+  const [searchIds, setSearchIds] = useState([]);
+  const [userInput, setUserInput] = useState('');
+
+  const handleInput = e => {
+    setUserInput(e.target.value);
+  };
 
   useEffect(() => {
     setIsLoggedIn(!!sessionStorage.getItem('id'));
   }, [isLoggedIn]);
+
+  useEffect(() => {
+    fetch('data/Search/search.json')
+      .then(res => res.json())
+      .then(data => {
+        setSearchIds(data);
+      });
+  }, []);
+
+  console.log(searchIds);
+
+  const filterId = userInput.length
+    ? searchIds.filter(idName => idName.account.includes(userInput))
+    : [];
 
   return (
     <nav className="nav-bar">
@@ -35,10 +56,8 @@ const Nav = ({ toggledarkmode }) => {
           </a>
         </div>
 
-        <div className="searchWrap">
-          <input type="search" placeholder="검색" className="nav-text-input" />
-          <img src="/images/search-icon.png" className="searchIcon" />
-        </div>
+        <SearchBox handleInput={handleInput} />
+        <SearchIdList searchIds={filterId} />
 
         <div className="icon-wrap">
           {MENU_ICONS.map(icons => {

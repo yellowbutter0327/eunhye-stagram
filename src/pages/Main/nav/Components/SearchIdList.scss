@@ -1,0 +1,31 @@
+.search-id-container {
+  text-decoration: none;
+  color: black;
+  position: absolute;
+  left: 50%;
+  top: 100%;
+  background: #fff;
+  width: 350px;
+  margin-left: -199px;
+  text-align: center;
+  max-height: 300px;
+  padding: 20px;
+  overflow: auto;
+  border: 1px solid #000;
+  .search-id-list {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    &:first-child {
+      margin-top: 0;
+    }
+    .search-user-img {
+      width: 40px;
+      border-radius: 50%;
+    }
+    .search-id {
+      margin-left: 10px;
+      font-size: 16px;
+    }
+  }
+}
