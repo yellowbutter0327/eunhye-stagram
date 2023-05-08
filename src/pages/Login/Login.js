@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
 import './login.scss';
-import Modal from './Modal/Modal.js';
 import { auth } from '../../firebase';
 import { signInWithEmailAndPassword } from 'firebase/auth';
 
@@ -12,7 +11,6 @@ const Login = () => {
   const [emailValid, setEmailValid] = useState(false);
   const [pwValid, setPwValid] = useState(false);
   const [notAllow, setNotAllow] = useState(true);
-  const [showModal, setShowModal] = useState(false);
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -59,10 +57,6 @@ const Login = () => {
       .catch(error => {
         console.log(error);
       });
-  };
-
-  const modalClose = () => {
-    setShowModal(false);
   };
 
   return (
@@ -128,7 +122,6 @@ const Login = () => {
             회원가입하기
           </Link>
         </div>
-        {showModal && <Modal modalClose={modalClose}></Modal>}
       </div>
     </div>
   );
