@@ -1,5 +1,5 @@
 import React from 'react';
-import './feedUnder.scss';
+import './FeedUnder.scss';
 
 const FeedUnder = ({ id, userFeedProfile, account }) => {
   return (

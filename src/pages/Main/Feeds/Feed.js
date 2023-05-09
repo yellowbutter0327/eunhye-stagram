@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import './feed.scss';
+import './Feed.scss';
 import Comment from './Comment/Comment';
 import FeedContent from './FeedContent/FeedContent';
 import FeedHeader from './FeedHeader/FeedHeader';
@@ -19,7 +19,6 @@ const Feed = ({
   const [uniqueKey, setUniqueKey] = useState(1);
   const [like, setLike] = useState(false);
   const [replyLike, setReplyLike] = useState(false);
-  const [commentContainer, setCommentContainer] = useState([]);
 
   function getReply(e) {
     const comment = e.target.value;
@@ -107,7 +106,7 @@ const Feed = ({
               </div>
 
               <div className="comment-register-wrap">
-                <form className="commentForm" onSubmit={submitComment}>
+                <form className="comment-form" onSubmit={submitComment}>
                   <input
                     className="addcomment-input"
                     placeholder="댓글 달기..."
@@ -116,7 +115,7 @@ const Feed = ({
                   />
 
                   <button
-                    className={reply.length >= 1 ? 'submitOn' : 'submitOff'}
+                    className={reply.length >= 1 ? 'submit-on' : 'submit-off'}
                   >
                     게시
                   </button>

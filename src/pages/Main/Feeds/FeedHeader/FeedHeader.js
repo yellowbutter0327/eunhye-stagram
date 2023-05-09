@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import './feedHeader.scss';
+import './FeedHeader.scss';
 
 const FeedHeader = ({ id, userFeedProfile, account }) => {
   return (

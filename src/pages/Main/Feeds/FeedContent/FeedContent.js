@@ -1,5 +1,5 @@
 import React from 'react';
-import './feedContent.scss';
+import './FeedContent.scss';
 
 const FeedContent = ({ feedImgsrc }) => {
   return (

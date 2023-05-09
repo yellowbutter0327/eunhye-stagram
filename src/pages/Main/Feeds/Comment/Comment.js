@@ -1,16 +1,10 @@
-import React, { useEffect, useState } from 'react';
-import './comment.scss';
+import React, { useState } from 'react';
+import './Comment.scss';
 
 const Comment = ({ id, account, removeReply, reply }) => {
   const [like, setLike] = useState(false);
-  const [showAll, setShowAll] = useState(false);
-
   const toggleLike = () => {
     setLike(prev => !prev);
-  };
-
-  const handleShowAll = () => {
-    setShowAll(true);
   };
 
   return (

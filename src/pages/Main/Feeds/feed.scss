@@ -70,7 +70,7 @@
 
     .comment-register-wrap {
       width: 100%;
-      .commentForm {
+      .comment-form {
         display: flex;
         height: 35px;
       }
@@ -80,7 +80,7 @@
         outline: 0;
       }
 
-      .submitOn {
+      .submit-on {
         white-space: nowrap;
         width: 10%;
         background-color: #0e689c;
@@ -88,7 +88,7 @@
         font-weight: bold;
         border: none;
       }
-      .submitOff {
+      .submit-off {
         white-space: nowrap;
         width: 10%;
         color: black;

@@ -61,15 +61,16 @@ function Register() {
     } else if (allow) {
       createUserWithEmailAndPassword(auth, email, pw)
         .then(userCredential => {
-          console.log(userCredential);
           alert('회원가입이 완료되었습니다.');
-          navigate('/login');
+          navigate('/');
         })
         .catch(error => {
-          console.log(error);
+          if (error.code === 'auth/email-already-in-use') {
+            alert('이미 가입된 이메일 주소입니다.');
+          } else {
+            alert('회원가입에 실패했습니다.');
+          }
         });
-    } else {
-      alert('이메일과 비밀번호를 입력해주세요.');
     }
   };
 
@@ -105,7 +106,7 @@ function Register() {
             value={pw}
             onChange={handlePw}
           />
-          <div className="errorMessageWrap">
+          <div className="error-message-wrap">
             {!pwValid && pw.length > 0 && (
               <div>영문, 숫자, 특수문자 포함 8자 이상 입력해주세요.</div>
             )}
@@ -121,7 +122,7 @@ function Register() {
             onChange={handlePwSame}
             value={pwSame}
           />
-          <div className="errorMessageWrap">
+          <div className="error-message-wrap">
             {!pwSameValid && pw.length > 0 && (
               <div>비밀번호와 일치하지 않습니다.</div>
             )}

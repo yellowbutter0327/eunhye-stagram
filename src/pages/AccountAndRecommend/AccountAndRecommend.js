@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';
-import './accountAndRecommend.scss';
+import './AccountAndRecommend.scss';
 
 const AccountAndRecommend = () => {
   const [recommendList, setRecommendList] = useState([]);
@@ -21,7 +20,7 @@ const AccountAndRecommend = () => {
 
   return (
     <div className="right-wrap">
-      <div className="accountAndRecommendContainer">
+      <div className="account-and-recommend-container">
         <div className="my-profile-tap">
           <img
             className="main-profile-img"

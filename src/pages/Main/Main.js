@@ -3,10 +3,10 @@ import Nav from './nav/Nav';
 import Story from './story/Story';
 import Feed from './Feeds/Feed';
 import AccountAndRecommend from 'pages/AccountAndRecommend/AccountAndRecommend.js';
-import './main.scss';
+import './Main.scss';
 
 const Main = () => {
-  const [DarkMode, setDarkMode] = useState(false);
+  const [darkMode, setDarkMode] = useState(false);
   const [feedList, setFeedList] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
 
@@ -21,15 +21,15 @@ const Main = () => {
   if (isLoading) return <p>loading...</p>;
 
   const toggledarkmode = () => {
-    setDarkMode(!DarkMode);
+    setDarkMode(!darkMode);
   };
 
   return (
-    <div className={DarkMode ? 'main-container dark-mode' : 'main-container'}>
+    <div className={darkMode ? 'main-container dark-mode' : 'main-container'}>
       <Nav toggledarkmode={toggledarkmode} />
       <Story className="story" toggledarkmode={toggledarkmode} />
       <main>
-        <section className="globalContainer">
+        <section className="global-container">
           <div className="left-wrap" toggledarkmode={toggledarkmode}>
             {feedList.map(
               ({
@@ -52,7 +52,7 @@ const Main = () => {
                     likeHit={likeHit}
                     replyAccount={replyAccount}
                     mockReply={mockReply}
-                    toggledarkmode={DarkMode}
+                    toggledarkmode={darkMode}
                   />
                 );
               }

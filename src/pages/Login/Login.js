@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
-import './login.scss';
+import './Login.scss';
 import { auth } from '../../firebase';
 import { signInWithEmailAndPassword } from 'firebase/auth';
 
@@ -47,21 +47,19 @@ const Login = () => {
     e.preventDefault();
     signInWithEmailAndPassword(auth, email, pw)
       .then(userCredential => {
-        sessionStorage.setItem('email', email);
-        sessionStorage.setItem('pw', pw);
-        // setIsLoggedIn(true);
+        sessionStorage.setItem('uid', userCredential.user.uid);
         alert('안녕하세요 :)');
         navigate('/main');
         window.location.reload();
       })
       .catch(error => {
-        console.log(error);
+        alert('로그인에 실패하였습니다. 다시 시도해주세요.');
       });
   };
 
   return (
     <div className="login">
-      <div className="picWrap">
+      <div className="pic-wrap">
         <div className="transition-pic">
           <img
             className="phone-pic img1"
@@ -78,10 +76,10 @@ const Login = () => {
         </div>
       </div>
 
-      <div className="loginWrap">
-        <div className="loginContainer">
+      <div className="login-wrap">
+        <div className="login-container">
           <h1 className="title">hyestagram</h1>
-          <form className="loginForm" method="POST">
+          <form className="login-form" method="POST">
             <input
               className="userId"
               type="text"
@@ -89,7 +87,7 @@ const Login = () => {
               value={email}
               onChange={handleEmail}
             ></input>
-            <div className="errorMessageWrap">
+            <div className="error-message-wrap">
               {!emailValid && email.length > 0 && (
                 <div>올바른 이메일을 입력해주세요.</div>
               )}
@@ -109,7 +107,7 @@ const Login = () => {
           </form>
 
           <button
-            className={`loginButton ${notAllow ? '' : 'enabled-button'}`}
+            className={`login-button ${notAllow ? '' : 'enabled-button'}`}
             onClick={handleSubmit}
             disabled={notAllow}
             type="button"
@@ -117,8 +115,8 @@ const Login = () => {
             로그인
           </button>
         </div>
-        <div className="findPassword">
-          <Link to="./register" className="findPwLink">
+        <div className="register-wrap">
+          <Link to="./register" className="register-link">
             회원가입하기
           </Link>
         </div>

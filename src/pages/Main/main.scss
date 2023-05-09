@@ -2,7 +2,7 @@
   background-color: #f2f2f2;
   padding-top: 60px;
 
-  .globalContainer {
+  .global-container {
     display: flex;
     margin: 0 auto;
     width: 1000px;
@@ -28,7 +28,7 @@
       color: white;
     }
 
-    .globalContainer {
+    .global-container {
       display: flex;
       margin: 0 auto;
       width: 1000px;
@@ -41,5 +41,4 @@
 :root {
   --profile-color: #262626;
   --usernick-color: white;
-  /* ...다른 변수들 */
 }

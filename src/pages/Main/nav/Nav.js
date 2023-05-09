@@ -1,10 +1,8 @@
 import React, { useState, useEffect } from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
 import { Link, useNavigate } from 'react-router-dom';
 import SearchBox from './Components/SearchBox';
 import SearchIdList from './Components/SearchIdList';
-import './nav.scss';
+import './Nav.scss';
 
 const Nav = ({ toggledarkmode }) => {
   const navigate = useNavigate();

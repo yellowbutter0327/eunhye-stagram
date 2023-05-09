@@ -7,7 +7,7 @@
   justify-content: space-between;
   margin: 100px auto;
 
-  .picWrap {
+  .pic-wrap {
     width: 40%;
     position: relative;
     height: 620px;
@@ -43,10 +43,10 @@
     }
   }
 
-  .loginWrap {
+  .login-wrap {
     width: 50%;
 
-    .loginContainer {
+    .login-container {
       display: flex;
       align-items: center;
       flex-direction: column;
@@ -58,7 +58,7 @@
         font-size: 60px;
       }
 
-      .loginForm {
+      .login-form {
         margin: 80px 0 50px 0;
         width: 100%;
         input {
@@ -72,12 +72,12 @@
           outline: none;
         }
 
-        .errorMessageWrap {
+        .error-message-wrap {
           padding-bottom: 7px;
         }
       }
 
-      .loginButton {
+      .login-button {
         width: 30%;
         padding: 20px 25px;
         margin-bottom: 50px;
@@ -88,20 +88,16 @@
         outline: none;
         opacity: 0.5;
         cursor: pointer;
-
-        // .loginButton enabled-button {
-        //   background-color: red;
-        //   color: white;
-        //   cursor: pointer;
-        // }
+        &.enabled-button {
+          background-color: $dark-blue;
+        }
       }
     }
-    .findPassword {
+    .register-wrap {
       border-bottom: 1px solid grey;
-      margin: 30px;
-      padding-bottom: 20px;
+      padding: 10px 0;
       text-align: center;
-      .findPwLink {
+      .register-link {
         color: darkblue;
         font-weight: bold;
         text-decoration: none;
