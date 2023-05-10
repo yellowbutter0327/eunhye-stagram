@@ -47,3 +47,4 @@ FIREBASE
 - 추천 계정 팔로우 및 언팔로우 기능
 - 로그아웃시 세션스토리지에서 제거
 
+회고록 : <a href="https://velog.io/@yellowbutter0327/hyestagram"> hyestagram회고 </a>
