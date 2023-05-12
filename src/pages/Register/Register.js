@@ -87,7 +87,7 @@ function Register() {
             value={email}
             onChange={handleEmail}
           />
-          <div className="errorMessageWrap">
+          <div className="error-message-wrap">
             {!emailValid && email.length > 0 && (
               <div>올바른 이메일을 입력해주세요.</div>
             )}
