@@ -72,8 +72,8 @@ const AccountAndRecommend = () => {
         </div>
       </div>
 
-      <div className="siteMapWrapper">
-        <ul className="siteMapList">
+      <div className="site-map-wrapper">
+        <ul className="site-map-list">
           {SITE_INFO.map(infoList => {
             return (
               <li key={infoList.id}>
@@ -96,60 +96,60 @@ const SITE_INFO = [
     id: 1,
     href: 'localhost:3000/mai',
     title: '소개',
-    className: 'siteInfoLink',
+    className: 'site-info-link',
   },
   {
     id: 2,
     href: 'localhost:3000/mai',
     title: '도움말',
-    className: 'siteInfoLink',
+    className: 'site-info-link',
   },
   {
     id: 3,
     href: 'localhost:3000/mai',
     title: '홍보센터',
-    className: 'siteInfoLink',
+    className: 'site-info-link',
   },
   {
     id: 4,
     href: 'localhost:3000/mai',
     title: 'API',
-    className: 'siteInfoLink',
+    className: 'site-info-link',
   },
   {
     id: 5,
     href: 'localhost:3000/mai',
     title: '채용',
-    className: 'siteInfoLink',
+    className: 'site-info-link',
   },
   {
     id: 6,
     href: 'localhost:3000/mai',
     title: '정보',
-    className: 'siteInfoLink',
+    className: 'site-info-link',
   },
   {
     id: 7,
     href: 'localhost:3000/mai',
     title: '개인정보처리방침',
-    className: 'siteInfoLink',
+    className: 'site-info-link',
   },
   {
     id: 8,
     href: 'localhost:3000/mai',
     title: '약관',
-    className: 'siteInfoLink',
+    className: 'site-info-link',
   },
   {
     id: 9,
     href: 'localhost:3000/mai',
     title: '위치',
-    className: 'siteInfoLink',
+    className: 'site-info-link',
   },
   {
     id: 10,
     href: 'localhost:3000/mai',
     title: '언어',
-    className: 'siteInfoLink lastElement',
+    className: 'site-info-link last-element',
   },
 ];

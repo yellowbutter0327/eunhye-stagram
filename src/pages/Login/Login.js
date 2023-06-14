@@ -81,7 +81,7 @@ const Login = () => {
           <h1 className="title">hyestagram</h1>
           <form className="login-form" method="POST">
             <input
-              className="userId"
+              className="user-id"
               type="text"
               placeholder="숫자,영문,특수문자 포함된 이메일"
               value={email}
@@ -93,13 +93,13 @@ const Login = () => {
               )}
             </div>
             <input
-              className="userPw"
+              className="user-password"
               type="password"
               placeholder="비밀번호"
               value={pw}
               onChange={handlePw}
             ></input>
-            <div className="errorMessageWrap">
+            <div className="error-message-wrap">
               {!pwValid && pw.length > 0 && (
                 <div>영문, 숫자, 특수문자 포함 8자 이상 입력해주세요.</div>
               )}

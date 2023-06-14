@@ -64,7 +64,7 @@ const Nav = ({ toggledarkmode }) => {
                   className={icons.className}
                   onClick={toggledarkmode}
                 >
-                  <img className="menuIcon" src={icons.src} alt={icons.alt} />
+                  <img className="menu-icon" src={icons.src} alt={icons.alt} />
                 </button>
               );
             }
@@ -75,7 +75,7 @@ const Nav = ({ toggledarkmode }) => {
                   onClick={() => setShowCategory(!showCategory)}
                   className="nav-my-page"
                 >
-                  <img className="menuIcon" src={icons.src} alt={icons.alt} />
+                  <img className="menu-icon" src={icons.src} alt={icons.alt} />
                   {showCategory && (
                     <ul className="category">
                       <li>
@@ -101,7 +101,7 @@ const Nav = ({ toggledarkmode }) => {
             return (
               <a href={icons.href} key={icons.key}>
                 <img
-                  className="menuIcon"
+                  className="menu-icon"
                   key={icons.key}
                   src={icons.src}
                   alt={icons.alt}

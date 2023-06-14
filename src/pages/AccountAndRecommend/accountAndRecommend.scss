@@ -179,22 +179,22 @@
     }
   }
 
-  .siteMapWrapper {
+  .site-map-wrapper {
     height: 50px;
     margin: 30px 5px;
 
-    .siteMapList {
+    .site-map-list {
       display: flex;
       flex-wrap: wrap;
       max-width: 300px;
 
-      .siteInfoLink {
+      .site-info-link {
         display: flex;
         margin-bottom: 5px;
         font-size: 12px;
         text-decoration: none;
         color: grey;
-        &:not(.lastElement)::after {
+        &:not(.last-element)::after {
           content: '\00B7';
           margin: 0 2px;
         }

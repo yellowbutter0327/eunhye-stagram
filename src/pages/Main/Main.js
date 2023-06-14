@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import Nav from './nav/Nav';
-import Story from './story/Story';
+import Nav from './Nav/Nav';
+import Story from './Story/Story';
 import Feed from './Feeds/Feed';
 import AccountAndRecommend from 'pages/AccountAndRecommend/AccountAndRecommend.js';
 import './Main.scss';

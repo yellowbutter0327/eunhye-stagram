@@ -1,12 +1,12 @@
 import React from 'react';
-import Profile from './profile/Profile';
-import './story.scss';
+import Profile from './Profile/Profile';
+import './Story.scss';
 
 const Story = () => {
   return (
     <div className="story">
-      <div className="storyContainer">
-        <ul className="storyWrap">
+      <div className="story-container">
+        <ul className="story-wrap">
           <Profile />
         </ul>
       </div>

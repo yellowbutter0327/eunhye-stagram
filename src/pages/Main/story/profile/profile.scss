@@ -1,4 +1,4 @@
-.storyProfile {
+.story-profile {
   background-color: transparent;
   border: none;
 
@@ -21,7 +21,7 @@
         border: 3px solid blue;
         border-radius: 50%;
       }
-      .userProfileImage {
+      .user-profile-image {
         width: 100%;
         height: 100%;
         object-fit: cover;
@@ -29,7 +29,7 @@
       }
     }
   }
-  .userAccount {
+  .user-account {
     color: var(--profile-color);
     display: block;
     font-size: 20px;
@@ -39,8 +39,6 @@
       .img-box {
         &:before {
           display: block;
-        }
-        .userProfileImage {
         }
       }
     }

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './profile.scss';
+import './Profile.scss';
 
 const Profile = () => {
   const [clickedCount, setClickedCount] = useState(
@@ -19,7 +19,7 @@ const Profile = () => {
           <li key={index}>
             <button
               onClick={() => handleButtonClick(index)}
-              className={`storyProfile ${
+              className={`story-profile ${
                 clickedCount[index] === 1 || clickedCount[index] > 1
                   ? 'disabled'
                   : ''
@@ -29,11 +29,11 @@ const Profile = () => {
                 <div className="img-box">
                   <img
                     src={profile.src}
-                    className="userProfileImage"
+                    className="user-profile-image"
                     alt="profile"
                   />
                 </div>
-                <span className="userAccount">{profile.name}</span>
+                <span className="user-account">{profile.name}</span>
               </div>
             </button>
           </li>
